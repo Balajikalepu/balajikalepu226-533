@@ -5,12 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>WEBPAGE</title>
    <script>
-        function greet() 
-         {
+        function greet() {
             alert('Hello, this is an internal JavaScript function!');
+        }
+
+        // Function to remember scroll position
+        function rememberScrollPosition() {
+            sessionStorage.setItem('scrollPosition', document.querySelector('.menu').scrollTop);
+        }
+
+        // Function to restore scroll position
+        function restoreScrollPosition() {
+            var scrollPosition = sessionStorage.getItem('scrollPosition');
+            if (scrollPosition) {
+                document.querySelector('.menu').scrollTop = scrollPosition;
+                sessionStorage.removeItem('scrollPosition');
+            }
         }
     </script>
     <style>
+   /* Add a line below "Introduction to JavaScript" */
+    .menu li:nth-child(4) {
+        border-bottom: 1px solid #fff;
+        margin-bottom: 10px;
+    }
     button {
             padding: 10px 20px;
             background-color: #4CAF50;
@@ -95,24 +113,43 @@
 	margin:100px;
 	} 
 
-</style>
-<body>
-<button onclick="greet()">Click me</button>
+    </style>
+</head>
+<body onload="restoreScrollPosition()">
+    <button onclick="greet()">Click me</button>
     <div class="container">
-    <div class="menu">
-        <h2>Menu</h2>
-        <ul>
-            <li><a href="home.html" target="_self">Home</a></li>
-            <li><a href="login.html" target="_self">Login</a></li>
-            <li><a href="register.html" target="_self">Register</a></li>
-            <li><a href="aboutus.html" target="_self">About Me</a></li>
-            <li><a href="internal.html" target="_self">Internal Java</a></li>
-            <li><a href="external.html" target="_self">External Java</a></li>
+        <div class="menu" onscroll="rememberScrollPosition()">
+            <h2>Menu</h2>
+            
+               <ul>
+            <li><a href="home.html" target="_self"><u>Home</u></a></li>
+            <li><a href="login.html" target="_self"><u>Login</u></a></li>
+            <li><a href="register.html" target="_self"><u>Register</u></a></li>
+            <li><a href="aboutus.html" target="_self"><u>About Me</u></a></li>
+	    <li><a href="intro.html" target="_self"><b>1.</b> <u>Introduction to JavaScript</u></a></li>
+            <li>
+                <b>2.</b> <u>Applying JavaScript    (Internal&External)</u>
+                <ol>
+                    <li><a href="internal.html" target="_self"><u>Internal Java</u></a></li>
+                    <li><a href="external.html" target="_self"><u>External Java</u></a></li>
+                </ol>
+            </li>
+            <li><a href="js.html" target="_self"><b>3.</b> <u>Understanding JS Syntax</u></a></li>
+	    <li><a href="doc.html" target="_self"><b>4.</b> <u>Introduction to Document and Window Object</u></a></li>
+	    <li><a href="var.html" target="_self"><b>5.</b> <u>Variables and operators</u></a></li>
+	    <li><a href="dt&nt.html" target="_self"><b>6.</b> <u>Data Types and NUM Type coversions</u></a></li>
+	    <li><a href="math.html" target="_self"><b>7.</b> <u>Math and String Manipulation</u></a></li>
+            <li><a href="obj.html" target="_self"><b>8.</b> <u>Objects and Arrays</u></a></li>
+            <li><a href="date.html" target="_self"><b>9.</b> <u>Date and Time</u></a></li>
+	    <li><a href="con.html" target="_self"><b>10.</b> <u>Conditional Statements</u></a></li>
+	    <li><a href="switch.html" target="_self"><b>11.</b> <u>Switch Case</u></a></li>
+	    <li><a href="loop.html" target="_self"><b>12.</b> <u>Looping in JS</u></a></li>
+	    <li><a href="func.html" target="_self"><b>13.</b> <u>Functions</u></a></li>
         </ul>
+        </div>
+        <div class="content">
+            <h2>Internal Java</h2>
+        </div>
     </div>
-    <div class="content">
-        <h2>Internal Java</h2>
-    </div>
-</div>
 </body>
 </html>

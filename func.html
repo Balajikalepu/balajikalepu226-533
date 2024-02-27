@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home Page</title>
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+    }
+    
+    .container {
+        display: flex;
+        height: 100vh;
+    }
+    
+    .menu {
+        flex: 0 0 auto;
+        width: 250px;
+        background: linear-gradient(to bottom, #333, #444);
+        color: #fff;
+        padding: 20px;
+        overflow-y: auto; /* Enable vertical scrollbar */
+        max-height: calc(100vh - 40px); /* Adjust height to fit remaining space */
+    }
+    
+    .menu h2 {
+        margin-top: 0;
+        border-bottom: 2px solid #fff;
+        padding-bottom: 10px;
+    }
+    
+    .menu ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    .menu li {
+        padding: 10px 0;
+    }
+    
+    .menu li a {
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+    
+    .menu li a:hover {
+        color: #ffc107;
+    }
+
+    /* Add a line below "Introduction to JavaScript" */
+    .menu li:nth-child(4) {
+        border-bottom: 1px solid #fff;
+        margin-bottom: 10px;
+    }
+    
+    .content {
+        flex: 1;
+        padding: 20px;
+    }
+    
+    .content h2 {
+        margin-top: 0;
+    }
+    
+    .content p {
+        line-height: 1.6;
+    }
+    section {
+        text-align: center;
+        margin: 0px;
+        background-color: #D3D3D3;
+        font-size: 20px;
+    }
+    para {
+        font: Times New Roman;
+        text-align: center;
+        font-size: 20px;
+        margin: 100px;
+    }
+</style>
+</head>
+<body>
+
+<div class="container" id="container">
+    <div class="menu" id="menu">
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="home.html" onclick="scrollToAnchor('home')"><u>Home</u></a></li>
+            <li><a href="login.html" onclick="scrollToAnchor('login')"><u>Login</u></a></li>
+            <li><a href="register.html" onclick="scrollToAnchor('register')"><u>Register</u></a></li>
+            <li><a href="about.html" onclick="scrollToAnchor('about')"><u>About Me</u></a></li>
+            <li><a href="intro.html" onclick="scrollToAnchor('intro')"><b>1.</b> <u>Introduction to JavaScript</u></a></li>
+            <li>
+                <b>2.</b> <u>Applying JavaScript    (Internal&External)</u>
+                <ol>
+                    <li><a href="internal.html" onclick="scrollToAnchor('internal')"><u>Internal Java</u></a></li>
+                    <li><a href="external.html" onclick="scrollToAnchor('external')"><u>External Java</u></a></li>
+                </ol>
+            </li>
+            <li><a href="js.html" onclick="scrollToAnchor('js')"><b>3.</b> <u>Understanding JS Syntax</u></a></li>
+            <li><a href="doc.html" onclick="scrollToAnchor('doc')"><b>4.</b> <u>Introduction to Document and Window Object</u></a></li>
+            <li><a href="var.html" onclick="scrollToAnchor('var')"><b>5.</b> <u>Variables and operators</u></a></li>
+            <li><a href="dt&nt.html" onclick="scrollToAnchor('dt&nt')"><b>6.</b> <u>Data Types and NUM Type coversions</u></a></li>
+            <li><a href="math.html" onclick="scrollToAnchor('math')"><b>7.</b> <u>Math and String Manipulation</u></a></li>
+            <li><a href="obj.html" onclick="scrollToAnchor('obj')"><b>8.</b> <u>Objects and Arrays</u></a></li>
+            <li><a href="date.html" onclick="scrollToAnchor('date')"><b>9.</b> <u>Date and Time</u></a></li>
+            <li><a href="con.html" onclick="scrollToAnchor('con')"><b>10.</b> <u>Conditional Statements</u></a></li>
+            <li><a href="switch.html" onclick="scrollToAnchor('switch')"><b>11.</b> <u>Switch Case</u></a></li>
+            <li><a href="loop.html" onclick="scrollToAnchor('loop')"><b>12.</b> <u>Looping in JS</u></a></li>
+            <li><a href="func.html" onclick="scrollToAnchor('func')"><b>13.</b> <u>Functions</u></a></li> 
+        </ul>
+    </div>
+    <div class="content">
+        <h2>Functions</h2>    
+    </div>
+</div>
+
+<script>
+    function scrollToAnchor(anchorId) {
+        // Save the current scroll position
+        var scrollPosition = window.scrollY;
+        // Scroll to the anchor
+        document.getElementById(anchorId).scrollIntoView();
+        // Restore the scroll position
+        window.scrollTo(0, scrollPosition);
+    }
+</script>
+
+</body>
+</html>
