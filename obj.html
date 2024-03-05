@@ -19,6 +19,7 @@
             }
         }
     </script>
+
 <style>
     body {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -28,20 +29,22 @@
     }
     
     .container {
-        display: flex;
-        height: 100vh;
-    }
-    
-    .menu {
-        flex: 0 0 auto;
-        width: 250px;
-        background: linear-gradient(to bottom, #333, #444);
-        color: #fff;
-        padding: 20px;
-        overflow-y: auto; /* Enable vertical scrollbar */
-        max-height: calc(100vh - 40px); /* Adjust height to fit remaining space */
-    }
-    
+    display: grid;
+    grid-template-columns: 250px 1fr; /* 1fr for the content to take remaining space */
+    height: 100vh;
+}
+
+.menu {
+    background: linear-gradient(to bottom, #333, #444);
+    color: #fff;
+    padding: 20px;
+    overflow-y: auto; /* Enable vertical scrollbar */
+}
+
+.content {
+    padding: 20px;
+    overflow-y: auto; /* Enable vertical scrollbar */
+}
     .menu h2 {
         margin-top: 0;
         border-bottom: 2px solid #fff;
@@ -73,10 +76,7 @@
         margin-bottom: 10px;
     }
     
-    .content {
-        flex: 1;
-        padding: 20px;
-    }
+    
     
     .content h2 {
         margin-top: 0;
@@ -93,7 +93,7 @@
     }
     para {
         font: Times New Roman;
-        text-align: center;
+      
         font-size: 20px;
         margin: 100px;
     }
@@ -131,7 +131,51 @@
         </ul>
     </div>
     <div class="content">
-        <h2>Objects and Arrays</h2>	
+        <para>
+<h1>Objects and Arrays</h1>
+
+    <h2>Introduction to Objects</h2>
+    <p>In JavaScript, an object is a collection of properties, where each property has a key and a value. Keys are typically strings, and values can be of any data type, including other objects or functions. Objects in JavaScript can be created using object literals or by instantiating object constructors.</p>
+
+    <pre><code>
+        // Creating an object using object literal
+        let person = {
+            name: 'John',
+            age: 30,
+            isStudent: false
+        };
+
+        // Accessing object properties
+        console.log(person.name); // Output: John
+        console.log(person.age); // Output: 30
+        console.log(person.isStudent); // Output: false
+    </code></pre>
+
+    <h2>Introduction to Arrays</h2>
+    <p>An array in JavaScript is a special type of object that stores a list of elements. Arrays can hold multiple values of different data types, and each value is assigned a numeric index starting from zero. Arrays in JavaScript are dynamic, meaning they can grow or shrink in size dynamically.</p>
+
+    <pre><code>
+        // Creating an array
+        let fruits = ['apple', 'banana', 'orange'];
+
+        // Accessing array elements
+        console.log(fruits[0]); // Output: apple
+        console.log(fruits[1]); // Output: banana
+        console.log(fruits[2]); // Output: orange
+
+        // Modifying array elements
+        fruits[1] = 'grape';
+        console.log(fruits); // Output: ['apple', 'grape', 'orange']
+
+        // Adding elements to an array
+        fruits.push('mango');
+        console.log(fruits); // Output: ['apple', 'grape', 'orange', 'mango']
+
+        // Removing elements from an array
+        fruits.pop();
+        console.log(fruits); // Output: ['apple', 'grape', 'orange']
+    </code></pre>
+</para>	
     </div>
 </div>
 

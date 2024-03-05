@@ -3,22 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Page</title>
 <script>
- // Function to remember scroll position
-        function rememberScrollPosition() {
-            sessionStorage.setItem('scrollPosition', document.querySelector('.menu').scrollTop);
-        }
+        // Store the scroll position when the window is scrolled
+window.addEventListener('scroll', function() {
+    sessionStorage.setItem('scrollPosition', window.scrollY);
+});
 
-        // Function to restore scroll position
-        function restoreScrollPosition() {
-            var scrollPosition = sessionStorage.getItem('scrollPosition');
-            if (scrollPosition) {
-                document.querySelector('.menu').scrollTop = scrollPosition;
-                sessionStorage.removeItem('scrollPosition');
-            }
-        }
+// Restore the scroll position when the page is loaded
+window.addEventListener('load', function() {
+    var scrollPosition = sessionStorage.getItem('scrollPosition');
+    if (scrollPosition !== null) {
+        window.scrollTo(0, scrollPosition);
+    }
+});
+
     </script>
+<title>My Page</title>
 <style>
 
     body {
@@ -28,20 +28,24 @@
         background-color: #f0f0f0;
     }
     
-    .container {
-        display: flex;
-        height: 100vh;
-    }
-    
-    .menu {
-        flex: 0 0 auto;
-        width: 250px;
-        background: linear-gradient(to bottom, #333, #444);
-        color: #fff;
-        padding: 20px;
-        overflow-y: auto; /* Enable vertical scrollbar */
-        max-height: calc(100vh - 40px); /* Adjust height to fit remaining space */
-    }
+.container {
+    display: grid;
+    grid-template-columns: 250px 1fr; /* 1fr for the content to take remaining space */
+    height: 100vh;
+}
+
+.menu {
+    background: linear-gradient(to bottom, #333, #444);
+    color: #fff;
+    padding: 20px;
+    overflow-y: auto; /* Enable vertical scrollbar */
+}
+
+.content {
+    padding: 20px;
+    overflow-y: auto; /* Enable vertical scrollbar */
+}
+
     
     .menu h2 {
         margin-top: 0;
@@ -74,10 +78,7 @@
         margin-bottom: 10px;
     }
     
-    .content {
-        flex: 1;
-        padding: 20px;
-    }
+ 	
     
     .content h2 {
         margin-top: 0;
@@ -94,7 +95,7 @@
     }
     para {
         font: Times New Roman;
-        text-align: center;
+        text-align:;
         font-size: 20px;
         margin: 100px;
     }
@@ -132,8 +133,39 @@
         </ul>
     </div>
     <div class="content">
-        <h2>Introduction to Java Script</h2>	
-    </div>
+     
+	<para>
+	 <h1>Introduction to JavaScript</h1>
+
+    <p>JavaScript is a high-level, interpreted programming language that conforms to the ECMAScript specification. It is widely used for creating interactive and dynamic websites.</p>
+
+    <h2>Features of JavaScript</h2>
+    <ul>
+        <li><strong>Client-Side Scripting:</strong> JavaScript is mainly used for client-side scripting, which means it runs in the user's web browser.</li>
+        <li><strong>Interactivity:</strong> JavaScript allows you to add interactivity to your web pages by responding to user actions like clicks, mouse movements, and keyboard input.</li>
+        <li><strong>Dynamic Content:</strong> With JavaScript, you can manipulate HTML elements and dynamically update the content of your web pages without reloading them.</li>
+        <li><strong>Browser Compatibility:</strong> JavaScript is supported by all major web browsers, including Chrome, Firefox, Safari, and Edge.</li>
+        <li><strong>Rich Ecosystem:</strong> JavaScript has a vast ecosystem of libraries and frameworks like React, Angular, and Vue.js, which simplify web development and allow you to build complex applications.</li>
+    </ul>
+
+    <h2>Getting Started with JavaScript</h2>
+    <p>To start using JavaScript in your web projects, you can include it directly within your HTML documents using the <code>&lt;script&gt;</code> tag:</p>
+
+    <pre><code>
+        &lt;script&gt;
+            // JavaScript code goes here
+        &lt;/script&gt;
+    </code></pre>
+
+    <p>You can also link external JavaScript files using the <code>&lt;script&gt;</code> tag's <code>src</code> attribute:</p>
+
+    <pre><code>
+        &lt;script src="script.js"&gt;&lt;/script&gt;
+    </code></pre>
+
+    <p>JavaScript code written within <code>&lt;script&gt;</code> tags or external files can be placed in the <code>&lt;head&gt;</code> or <code>&lt;body&gt;</code> sections of your HTML document.</p>
+
+    </div>	
 </div>
 
 </body>

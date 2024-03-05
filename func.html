@@ -4,6 +4,22 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>My Page</title>
+<script>
+ // Function to remember scroll position
+        function rememberScrollPosition() {
+            sessionStorage.setItem('scrollPosition', document.querySelector('.menu').scrollTop);
+        }
+
+        // Function to restore scroll position
+        function restoreScrollPosition() {
+            var scrollPosition = sessionStorage.getItem('scrollPosition');
+            if (scrollPosition) {
+                document.querySelector('.menu').scrollTop = scrollPosition;
+                sessionStorage.removeItem('scrollPosition');
+            }
+        }
+    </script>
+
 <style>
     body {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -12,20 +28,23 @@
         background-color: #f0f0f0;
     }
     
-    .container {
-        display: flex;
-        height: 100vh;
-    }
-    
-    .menu {
-        flex: 0 0 auto;
-        width: 250px;
-        background: linear-gradient(to bottom, #333, #444);
-        color: #fff;
-        padding: 20px;
-        overflow-y: auto; /* Enable vertical scrollbar */
-        max-height: calc(100vh - 40px); /* Adjust height to fit remaining space */
-    }
+  .container {
+    display: grid;
+    grid-template-columns: 250px 1fr; /* 1fr for the content to take remaining space */
+    height: 100vh;
+}
+
+.menu {
+    background: linear-gradient(to bottom, #333, #444);
+    color: #fff;
+    padding: 20px;
+    overflow-y: auto; /* Enable vertical scrollbar */
+}
+
+.content {
+    padding: 20px;
+    overflow-y: auto; /* Enable vertical scrollbar */
+}
     
     .menu h2 {
         margin-top: 0;
@@ -58,10 +77,6 @@
         margin-bottom: 10px;
     }
     
-    .content {
-        flex: 1;
-        padding: 20px;
-    }
     
     .content h2 {
         margin-top: 0;
@@ -78,7 +93,7 @@
     }
     para {
         font: Times New Roman;
-        text-align: center;
+      
         font-size: 20px;
         margin: 100px;
     }
@@ -88,7 +103,7 @@
 
 <div class="container" id="container">
     <div class="menu" id="menu">
-        <h2>Menu</h2>
+        <h2><center>Menu</center></h2>
         <ul>
             <li><a href="home.html" onclick="scrollToAnchor('home')"><u>Home</u></a></li>
             <li><a href="login.html" onclick="scrollToAnchor('login')"><u>Login</u></a></li>
@@ -116,20 +131,62 @@
         </ul>
     </div>
     <div class="content">
-        <h2>Functions</h2>    
+       <para>
+<h1>Functions</h1>
+
+    <h2>Introduction to Functions</h2>
+    <p>Functions are one of the fundamental building blocks in JavaScript. They allow you to encapsulate a block of code that can be executed and reused throughout your program. Functions can accept input parameters and return values.</p>
+
+    <h2>Defining Functions</h2>
+    <p>You can define functions using the <code>function</code> keyword followed by the function name, a list of parameters enclosed in parentheses, and the function body enclosed in curly braces.</p>
+    <pre><code>
+        // Defining a function
+        function greet(name) {
+            return 'Hello, ' + name + '!';
+        }
+    </code></pre>
+
+    <h2>Calling Functions</h2>
+    <p>To call a function, simply use the function name followed by parentheses. You can pass arguments to the function within the parentheses.</p>
+    <pre><code>
+        // Calling a function
+        let message = greet('John');
+        console.log(message); // Output: Hello, John!
+    </code></pre>
+
+    <h2>Function Parameters and Arguments</h2>
+    <p>Functions can accept parameters, which are placeholders for values that the function expects to receive when it is called. Arguments are the actual values passed to the function when it is called.</p>
+    <pre><code>
+        // Function with parameters
+        function add(a, b) {
+            return a + b;
+        }
+        let result = add(5, 3);
+        console.log(result); // Output: 8
+    </code></pre>
+
+    <h2>Returning Values</h2>
+    <p>Functions can return values using the <code>return</code> keyword. Once a function encounters a <code>return</code> statement, it immediately exits, and the value is returned to the caller.</p>
+    <pre><code>
+        // Function returning a value
+        function multiply(a, b) {
+            return a * b;
+        }
+        let product = multiply(4, 6);
+        console.log(product); // Output: 24
+    </code></pre>
+
+    <h2>Anonymous Functions</h2>
+    <p>JavaScript also supports anonymous functions, which are functions without a name. They are often used as arguments to other functions or assigned to variables.</p>
+    <pre><code>
+        // Anonymous function assigned to a variable
+        let greet = function(name) {
+            return 'Hello, ' + name + '!';
+        };
+        console.log(greet('Jane')); // Output: Hello, Jane!
+    </code></pre>
+</para>    
     </div>
 </div>
-
-<script>
-    function scrollToAnchor(anchorId) {
-        // Save the current scroll position
-        var scrollPosition = window.scrollY;
-        // Scroll to the anchor
-        document.getElementById(anchorId).scrollIntoView();
-        // Restore the scroll position
-        window.scrollTo(0, scrollPosition);
-    }
-</script>
-
 </body>
 </html>

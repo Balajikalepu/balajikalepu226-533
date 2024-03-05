@@ -19,6 +19,7 @@
             }
         }
     </script>
+
 <style>
     body {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -27,21 +28,23 @@
         background-color: #f0f0f0;
     }
     
-    .container {
-        display: flex;
-        height: 100vh;
-    }
-    
-    .menu {
-        flex: 0 0 auto;
-        width: 250px;
-        background: linear-gradient(to bottom, #333, #444);
-        color: #fff;
-        padding: 20px;
-        overflow-y: auto; /* Enable vertical scrollbar */
-        max-height: calc(100vh - 40px); /* Adjust height to fit remaining space */
-    }
-    
+   .container {
+    display: grid;
+    grid-template-columns: 250px 1fr; /* 1fr for the content to take remaining space */
+    height: 100vh;
+}
+
+.menu {
+    background: linear-gradient(to bottom, #333, #444);
+    color: #fff;
+    padding: 20px;
+    overflow-y: auto; /* Enable vertical scrollbar */
+}
+
+.content {
+    padding: 20px;
+    overflow-y: auto; /* Enable vertical scrollbar */
+}
     .menu h2 {
         margin-top: 0;
         border-bottom: 2px solid #fff;
@@ -73,10 +76,7 @@
         margin-bottom: 10px;
     }
     
-    .content {
-        flex: 1;
-        padding: 20px;
-    }
+   
     
     .content h2 {
         margin-top: 0;
@@ -93,7 +93,7 @@
     }
     para {
         font: Times New Roman;
-        text-align: center;
+       
         font-size: 20px;
         margin: 100px;
     }
@@ -131,7 +131,29 @@
         </ul>
     </div>
     <div class="content">
-        <h2>Introduction to Document and Window Object</h2>	
+       <para>
+<h1>Introduction to Document and Window Object</h1>
+
+    <h2>Document Object Model (DOM):</h2>
+    <p>The Document Object Model represents the structure of an HTML document as a tree-like structure, where each node corresponds to an HTML element. This hierarchical representation allows JavaScript to access, modify, and manipulate the content, structure, and style of an HTML document dynamically.</p>
+    <ul>
+        <li><strong>Tree Structure:</strong> The DOM represents an HTML document as a tree structure, with each element as a node in the tree.</li>
+        <li><strong>Access and Manipulation:</strong> JavaScript can access and manipulate elements within the DOM using methods like <code>getElementById</code>, <code>getElementsByClassName</code>, <code>querySelector</code>, <code>createElement</code>, <code>appendChild</code>, etc.</li>
+        <li><strong>Dynamic Updates:</strong> Changes made to the DOM through JavaScript are reflected instantly in the rendered web page, enabling dynamic updates and interactions.</li>
+        <li><strong>Event Handling:</strong> The DOM allows JavaScript to register event listeners and respond to user interactions such as clicks, keypresses, mouse movements, etc.</li>
+    </ul>
+
+    <h2>Window Object:</h2>
+    <p>The Window Object represents the browser window or tab that contains the HTML document. It provides methods and properties for controlling the browser window, navigating to different URLs, handling cookies, and much more.</p>
+    <ul>
+        <li><strong>Global Scope:</strong> In the browser environment, the Window Object is the global object. This means that properties and methods of the Window Object can be accessed directly without qualification.</li>
+        <li><strong>Browser Interaction:</strong> The Window Object provides methods for interacting with the browser, such as <code>alert</code>, <code>confirm</code>, <code>prompt</code>, <code>open</code>, <code>close</code>, <code>scrollTo</code>, <code>setInterval</code>, <code>setTimeout</code>, etc.</li>
+        <li><strong>Navigation:</strong> Methods like <code>window.location</code> allow for navigation to different URLs, while properties like <code>window.history</code> provide access to the browsing history.</li>
+        <li><strong>Window Events:</strong> The Window Object allows JavaScript to respond to various browser events such as loading, resizing, scrolling, etc.</li>
+    </ul>
+
+    <p>Understanding the Document Object Model and Window Object is essential for creating dynamic and interactive web applications. By leveraging these objects, developers can create powerful and engaging user experiences on the web.</p>
+</para>
     </div>
 </div>
 

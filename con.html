@@ -19,6 +19,8 @@
             }
         }
     </script>
+
+
 <style>
     body {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -27,21 +29,23 @@
         background-color: #f0f0f0;
     }
     
-    .container {
-        display: flex;
-        height: 100vh;
-    }
-    
-    .menu {
-        flex: 0 0 auto;
-        width: 250px;
-        background: linear-gradient(to bottom, #333, #444);
-        color: #fff;
-        padding: 20px;
-        overflow-y: auto; /* Enable vertical scrollbar */
-        max-height: calc(100vh - 40px); /* Adjust height to fit remaining space */
-    }
-    
+.container {
+    display: grid;
+    grid-template-columns: 250px 1fr; /* 1fr for the content to take remaining space */
+    height: 100vh;
+}
+
+.menu {
+    background: linear-gradient(to bottom, #333, #444);
+    color: #fff;
+    padding: 20px;
+    overflow-y: auto; /* Enable vertical scrollbar */
+}
+
+.content {
+    padding: 20px;
+    overflow-y: auto; /* Enable vertical scrollbar */
+}
     .menu h2 {
         margin-top: 0;
         border-bottom: 2px solid #fff;
@@ -73,10 +77,6 @@
         margin-bottom: 10px;
     }
     
-    .content {
-        flex: 1;
-        padding: 20px;
-    }
     
     .content h2 {
         margin-top: 0;
@@ -93,7 +93,7 @@
     }
     para {
         font: Times New Roman;
-        text-align: center;
+      
         font-size: 20px;
         margin: 100px;
     }
@@ -131,7 +131,53 @@
         </ul>
     </div>
     <div class="content">
-        <h2>Conditional Statements</h2>	
+        <para>
+<h1>Conditional Statements</h1>
+
+    <h2>Introduction</h2>
+    <p>Conditional statements are used to execute different actions based on different conditions. In JavaScript, there are mainly three types of conditional statements:</p>
+    <ul>
+        <li><strong>if</strong>: Executes a block of code if the specified condition is true.</li>
+        <li><strong>if...else</strong>: Executes one block of code if the specified condition is true and another block if the condition is false.</li>
+        <li><strong>switch</strong>: Selects one of many blocks of code to be executed based on different cases.</li>
+    </ul>
+
+    <h2>if Statement</h2>
+    <p>The <code>if</code> statement is used to execute a block of code if a specified condition is true.</p>
+    <pre><code>
+        let num = 10;
+        if (num > 0) {
+            console.log('The number is positive');
+        }
+    </code></pre>
+
+    <h2>if...else Statement</h2>
+    <p>The <code>if...else</code> statement executes one block of code if the specified condition is true and another block if the condition is false.</p>
+    <pre><code>
+        let num = -5;
+        if (num > 0) {
+            console.log('The number is positive');
+        } else {
+            console.log('The number is negative or zero');
+        }
+    </code></pre>
+
+    <h2>switch Statement</h2>
+    <p>The <code>switch</code> statement selects one of many code blocks to be executed based on different cases.</p>
+    <pre><code>
+        let day = 'Monday';
+        switch (day) {
+            case 'Monday':
+                console.log('It\'s Monday');
+                break;
+            case 'Tuesday':
+                console.log('It\'s Tuesday');
+                break;
+            default:
+                console.log('It\'s another day');
+        }
+    </code></pre>
+</para>	
     </div>
 </div>
 

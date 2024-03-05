@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>My Page</title>
-   <script>
-
+<script>
  // Function to remember scroll position
         function rememberScrollPosition() {
             sessionStorage.setItem('scrollPosition', document.querySelector('.menu').scrollTop);
@@ -19,12 +18,9 @@
                 sessionStorage.removeItem('scrollPosition');
             }
         }
-    
-        function greet() 
-         {
-            alert('Hello, this is an external JavaScript function!');
-        }
     </script>
+
+
     <style>
  /* Add a line below "Introduction to JavaScript" */
     .menu li:nth-child(4) {
@@ -50,20 +46,23 @@
         background-color: #f0f0f0;
     }
     
-    .container {
-        display: flex;
-        height: 100vh;
-    }
-    
-    .menu {
-        flex: 0 0 auto;
-        width: 250px;
-        background: linear-gradient(to bottom, #333, #444);
-        color: #fff;
-        padding: 20px;
-        overflow-y: auto; /* Enable vertical scrollbar */
-        max-height: calc(100vh - 40px); /* Adjust height to fit remaining space */
-    }
+   .container {
+    display: grid;
+    grid-template-columns: 250px 1fr; /* 1fr for the content to take remaining space */
+    height: 100vh;
+}
+
+.menu {
+    background: linear-gradient(to bottom, #333, #444);
+    color: #fff;
+    padding: 20px;
+    overflow-y: auto; /* Enable vertical scrollbar */
+}
+
+.content {
+    padding: 20px;
+    overflow-y: auto; /* Enable vertical scrollbar */
+}
     
     .menu h2 {
         margin-top: 0;
@@ -90,10 +89,6 @@
         color: #ffc107;
     }
     
-    .content {
-        flex: 1;
-        padding: 20px;
-    }
     
     .content h2 {
         margin-top: 0;

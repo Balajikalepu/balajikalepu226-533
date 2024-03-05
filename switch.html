@@ -19,6 +19,7 @@
             }
         }
     </script>
+
 <style>
     body {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -28,19 +29,22 @@
     }
     
     .container {
-        display: flex;
-        height: 100vh;
-    }
-    
-    .menu {
-        flex: 0 0 auto;
-        width: 250px;
-        background: linear-gradient(to bottom, #333, #444);
-        color: #fff;
-        padding: 20px;
-        overflow-y: auto; /* Enable vertical scrollbar */
-        max-height: calc(100vh - 40px); /* Adjust height to fit remaining space */
-    }
+    display: grid;
+    grid-template-columns: 250px 1fr; /* 1fr for the content to take remaining space */
+    height: 100vh;
+}
+
+.menu {
+    background: linear-gradient(to bottom, #333, #444);
+    color: #fff;
+    padding: 20px;
+    overflow-y: auto; /* Enable vertical scrollbar */
+}
+
+.content {
+    padding: 20px;
+    overflow-y: auto; /* Enable vertical scrollbar */
+}
     
     .menu h2 {
         margin-top: 0;
@@ -73,10 +77,7 @@
         margin-bottom: 10px;
     }
     
-    .content {
-        flex: 1;
-        padding: 20px;
-    }
+   
     
     .content h2 {
         margin-top: 0;
@@ -93,7 +94,7 @@
     }
     para {
         font: Times New Roman;
-        text-align: center;
+  
         font-size: 20px;
         margin: 100px;
     }
@@ -131,7 +132,57 @@
         </ul>
     </div>
     <div class="content">
-        <h2>Switch Case</h2>	
+    <para>
+<h1>Switch Case in JavaScript</h1>
+
+    <p>The switch statement is used to perform different actions based on different conditions. It evaluates an expression, matches the expression value with case labels, and executes the block of code associated with the matching case.</p>
+
+    <h2>Syntax</h2>
+    <pre><code>
+        switch (expression) {
+            case value1:
+                // Statements
+                break;
+            case value2:
+                // Statements
+                break;
+            ...
+            default:
+                // Statements
+                break;
+        }
+    </code></pre>
+
+    <p>The <code>switch</code> keyword is followed by an expression in parentheses. The expression is evaluated once and compared with the values of each case. If there is a match, the associated block of code is executed. If no match is found, the <code>default</code> block (if provided) is executed.</p>
+
+    <h2>Example</h2>
+    <pre><code>
+        let day = "Wednesday";
+        let message;
+
+        switch (day) {
+            case "Monday":
+                message = "It's Monday!";
+                break;
+            case "Tuesday":
+                message = "It's Tuesday!";
+                break;
+            case "Wednesday":
+                message = "It's Wednesday!";
+                break;
+            default:
+                message = "It's neither Monday nor Tuesday nor Wednesday.";
+                break;
+        }
+
+        console.log(message); // Output: It's Wednesday!
+    </code></pre>
+
+    <p>In this example, the value of the <code>day</code> variable is evaluated in the switch statement. Since the value is "Wednesday", the corresponding case block is executed, assigning the message "It's Wednesday!" to the <code>message</code> variable.</p>
+
+    <p>Switch case statements provide a cleaner way to write code when there are multiple conditions to be evaluated.</p>
+</para>
+	
     </div>
 </div>
 
