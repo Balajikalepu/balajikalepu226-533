@@ -4,151 +4,155 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>My Page</title>
-<script>
- // Function to remember scroll position
-        function rememberScrollPosition() {
-            sessionStorage.setItem('scrollPosition', document.querySelector('.menu').scrollTop);
-        }
-
-        // Function to restore scroll position
-        function restoreScrollPosition() {
-            var scrollPosition = sessionStorage.getItem('scrollPosition');
-            if (scrollPosition) {
-                document.querySelector('.menu').scrollTop = scrollPosition;
-                sessionStorage.removeItem('scrollPosition');
-            }
-        }
-    </script>
-
 <style>
-    body {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f0f0f0;
-    }
-    
-    .container {
-    display: grid;
-    grid-template-columns: 250px 1fr; /* 1fr for the content to take remaining space */
-    height: 100vh;
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5dc;
 }
 
-.menu {
-    background: linear-gradient(to bottom, #333, #444);
-    color: #fff;
-    padding: 20px;
-    overflow-y: auto; /* Enable vertical scrollbar */
+/* Improved menu bar styles */
+nav {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #BAB86C;
+  color: white;
+  border-radius: 145px;
+ box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); /* Shadow for the hover effect */
 }
 
+
+nav a {
+  color: white; /* Text color */
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease; /* Animation for smooth transition */
+}
+
+nav a:hover {
+  background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent black on hover */
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); /* Shadow for the hover effect */
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #FFFFF0;
+  border-radius:20px;
+  min-width: 350px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); /* Shadow for the hover effect */
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  border-radius:20px;
+  display: block;
+  transition: background-color 0.3s ease;
+ 
+}
+
+.dropdown-content a:hover {
+ background-color: rgba(0, 0, 0, 0.3);
+   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); /* Shadow for the hover effect */
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Other styles remain unchanged */
 .content {
-    padding: 20px;
-    overflow-y: auto; /* Enable vertical scrollbar */
+  padding: 50px;
+  text-align: center;
 }
-    .menu h2 {
-        margin-top: 0;
-        border-bottom: 2px solid #fff;
-        padding-bottom: 10px;
-    }
-    
-    .menu ul {
-        list-style-type: none;
-        padding: 0;
-    }
-    
-    .menu li {
-        padding: 10px 0;
-    }
-    
-    .menu li a {
-        color: #fff;
-        text-decoration: none;
-        transition: color 0.3s;
-    }
-    
-    .menu li a:hover {
-        color: #ffc107;
-    }
 
-    /* Add a line below "Introduction to JavaScript" */
-    .menu li:nth-child(4) {
-        border-bottom: 1px solid #fff;
-        margin-bottom: 10px;
-    }
-    
-   
-    .content h2 {
-        margin-top: 0;
-    }
-    
-    .content p {
-        line-height: 1.6;
-    }
-    section {
-        text-align: center;
-        margin: 0px;
-        background-color: #D3D3D3;
-        font-size: 20px;
-    }
-    para {
-        font: Times New Roman;
-        text-align: center;
-        font-size: 20px;
-        margin: 100px;
-    }
+.content h2 {
+  margin-top: 0;
+  font-size: 2em;
+  color: #333;
+}
+
+.content p {
+  line-height: 1.6;
+  color: #666;
+}
+
+section {
+  background-color: #FFFFF0;
+   border-radius: 145px;
+  box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.1);
+  padding: 20px;
+  margin: 20px 0;
+ box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); /* Shadow for the hover effect */
+}
+
+.department-title {
+  margin-bottom: 10px;
+}
+
+.department-info {
+  font-weight: bold;
+}
 </style>
 </head>
 <body>
+<nav>
+  <a href="home.html">Home</a>
+  <a href="login.html">Login</a>
+  <a href="register.html">Register</a>
+  <a href="aboutus.html">About Me</a>
+  <div class="dropdown">
+    <a href="#">Lab</a>
+    <div class="dropdown-content">
+      <a href="intro.html">1. Introduction to JavaScript</a>
+      <a href="#">2. Applying JavaScript</a>
+      <a href="internal.html">Internal Java</a>
+      <a href="external.html">External Java</a>
+      <a href="js.html">3. Understanding JS Syntax</a>
+      <a href="doc.html">4. Introduction to Document and Window Object</a>
+      <a href="var.html">5. Variables and operators</a>
+      <a href="dt&nt.html">6. Data Types and NUM Type coversions</a>
+      <a href="math.html">7.Math and String Manipulation</a>
+      <a href="obj.html">8.Objects and Arrays</a>
+      <a href="date.html">9.Date and Time</a>
+      <a href="con.html">10.Conditional Statements</a>
+      <a href="switch.html">11.Switch Case</a>
+      <a href="loop.html">12.Looping in JS</a>
+      <a href="func.html">13.Functions</a>
+            </div>
+        </li>
+    </ul>
+</nav>
 
-<div class="container">
-    <div class="menu" id="menu">
-      <h2><center>Menu</center></h2>
-        <ul>
-            <li><a href="home.html" target="_self" onclick="smoothScroll('home')"><u>Home</u></a></li>
-            <li><a href="login.html" target="_self" onclick="smoothScroll('login')"><u>Login</u></a></li>
-            <li><a href="register.html" target="_self" onclick="smoothScroll('register')"><u>Register</u></a></li>
-            <li><a href="aboutus.html" target="_self" onclick="smoothScroll('aboutus')"><u>About Me</u></a></li>
-	    <li><a href="intro.html" target="_self" onclick="smoothScroll('intro')"><b>1.</b> <u>Introduction to JavaScript</u></a></li>
-            <li>
-                <b>2.</b> <u>Applying JavaScript    (Internal&External)</u>
-                <ol>
-                    <li><a href="internal.html" target="_self" onclick="smoothScroll('internal')"><u>Internal Java</u></a></li>
-                    <li><a href="external.html" target="_self" onclick="smoothScroll('external')"><u>External Java</u></a></li>
-                </ol>
-            </li>
-            <li><a href="js.html" target="_self" onclick="smoothScroll('js')"><b>3.</b> <u>Understanding JS Syntax</u></a></li>
-	    <li><a href="doc.html" target="_self" onclick="smoothScroll('doc')"><b>4.</b> <u>Introduction to Document and Window Object</u></a></li>
-	    <li><a href="var.html" target="_self" onclick="smoothScroll('var')"><b>5.</b> <u>Variables and operators</u></a></li>
-	    <li><a href="dt&nt.html" target="_self" onclick="smoothScroll('dt&nt')"><b>6.</b> <u>Data Types and NUM Type coversions</u></a></li>
-	    <li><a href="math.html" target="_self" onclick="smoothScroll('math')"><b>7.</b> <u>Math and String Manipulation</u></a></li>
-            <li><a href="obj.html" target="_self" onclick="smoothScroll('obj')"><b>8.</b> <u>Objects and Arrays</u></a></li>
-            <li><a href="date.html" target="_self" onclick="smoothScroll('date')"><b>9.</b> <u>Date and Time</u></a></li>
-	    <li><a href="con.html" target="_self" onclick="smoothScroll('con')"><b>10.</b> <u>Conditional Statements</u></a></li>
-	    <li><a href="switch.html" target="_self" onclick="smoothScroll('switch')"><b>11.</b> <u>Switch Case</u></a></li>
-	    <li><a href="loop.html" target="_self" onclick="smoothScroll('loop')"><b>12.</b> <u>Looping in JS</u></a></li>
-	    <li><a href="func.html" target="_self" onclick="smoothScroll('func')"><b>13.</b> <u>Functions</u></a></li>
-        </ul>
-    </div>
     <div class="content">
-        <h2>Welcome to My Webpage</h2>
-        <para>
+    <h2>Welcome to My Webpage</h2>
+<section class="department-section"> 
+<b><u><h2>Personel Details</h2></u></b>
+
+
             <p><b>Name:</b> Kalepu Sri Balaji</p>
             <p><b>Roll No:</b> 226M1A0533</p>
-        </para>
-        <section class="department-section">
-            <h2 class="department-title">Department Information</h2>
+     
+        
+            <h2 class="department-title"><u>Department Information</u></h2>
             <p class="department-info"><b>Department:</b> DEPARTMENT OF CSE</p>
             <p class="department-info"><b>Program:</b> SKILL ORIENTED LAB</p>
-        </section>
+           </section>
     </div>
 </div>
 
-<script>
-    function smoothScroll(target) {
-        var element = document.getElementById(target);
-        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-</script>
 
 </body>
 </html>
