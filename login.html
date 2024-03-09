@@ -205,12 +205,24 @@ section {
 
     <label for="password">Password:</label>
     <input type="password" id="password" name="password" required>
+          <input type="checkbox" id="showPassword" onchange="togglePasswordVisibility()">
+        <label for="showPassword">Show Password</label>
 
     <button type="button" onclick="validateLogin()">Login</button>
   </form>
 </div>
 
 <script>
+function togglePasswordVisibility() {
+    var passwordField = document.getElementById('password');
+    var showPasswordCheckbox = document.getElementById('showPassword');
+
+    if (showPasswordCheckbox.checked) {
+      passwordField.type = 'text';
+    } else {
+      passwordField.type = 'password';
+    }
+}
    function validateLogin() {
         var username = document.getElementById('username').value;
         var password = document.getElementById('password').value;
