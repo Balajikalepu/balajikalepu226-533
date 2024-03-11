@@ -164,7 +164,27 @@ section {
     <p><strong><u>Access to DOM:</u></strong> Since internal JavaScript is embedded within the HTML document, it has direct access to the Document Object Model (DOM) of the page. This allows it to manipulate the structure, content, and style of the page dynamically.</p>
     <p><strong><u>Execution Order:</u></strong> Internal JavaScript executes in the order it appears in the HTML document. Scripts placed in the <code>&lt;head&gt;</code> section are executed before those in the <code>&lt;body&gt;</code> section.</p>
     <p><strong><u>Pros and Cons:</u></strong> Internal JavaScript can be convenient for small scripts or scripts specific to a single page since it's included directly within the HTML. However, for larger scripts or scripts used across multiple pages, it's often better to use external JavaScript files to separate concerns and improve maintainability.</p>
-<p>Here below button is an internal java button click it to view the message</p>
+</span>
+ <h2>Example</h2>
+ <span style="font-size: 20px;">
+    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Internal JavaScript Example&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Internal JavaScript Example&lt;/h1&gt;
+    &lt;script&gt;
+        // Display an alert message
+        alert('Hello, this is an internal JavaScript example!');
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        </div>
+        <p>In this example, the JavaScript code enclosed within the &lt;script&gt; tags is executed when the HTML document is loaded. It displays an alert message with the text "Hello, this is an internal JavaScript example!"</p>
+ <p>Here below button is an internal java button click it to view the message</p>
 </span>
        <button onclick="greet()"><center>Click me</center></button>
 </section>
