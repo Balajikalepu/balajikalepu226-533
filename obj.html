@@ -12,7 +12,6 @@ body {
   background-color: #f5f5dc;
 }
 
-/* Improved menu bar styles */
 nav {
   display: flex;
   align-items: center;
@@ -20,22 +19,22 @@ nav {
   background-color: #BAB86C;
   color: white;
   border-radius: 145px;
- box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); /* Shadow for the hover effect */
+ box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
 }
 
 
 nav a {
-  color: white; /* Text color */
+  color: white;
   text-decoration: none;
   font-weight: bold;
   padding: 10px 15px;
   border-radius: 20px;
-  transition: background-color 0.3s ease; /* Animation for smooth transition */
+  transition: background-color 0.3s ease; 
 }
 
 nav a:hover {
-  background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent black on hover */
-  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); /* Shadow for the hover effect */
+  background-color: rgba(0, 0, 0, 0.3); 
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); 
 }
 
 .dropdown {
@@ -50,7 +49,7 @@ nav a:hover {
   min-width: 350px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
-   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); /* Shadow for the hover effect */
+   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); 
 }
 
 .dropdown-content a {
@@ -65,14 +64,13 @@ nav a:hover {
 
 .dropdown-content a:hover {
  background-color: rgba(0, 0, 0, 0.3);
-   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); /* Shadow for the hover effect */
+   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); 
 }
 
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
-/* Other styles remain unchanged */
 .content {
   padding: 50px;
 
@@ -95,7 +93,7 @@ section {
   box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.1);
   padding: 20px;
   margin: 20px 0;
- box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); /* Shadow for the hover effect */
+ box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
 }
 
 .department-title {
@@ -137,13 +135,11 @@ section {
     </ul>
 </nav>
     <div class="content">
-        <section>
-<h2>Objects and Arrays</h2>
-
+    <section>
+    <h2>Objects and Arrays</h2>
     <h2>Introduction to Objects</h2>
-<span style="font-size: 20px;">
+    <span style="font-size: 20px;">
     <p>In JavaScript, an object is a collection of properties, where each property has a key and a value. Keys are typically strings, and values can be of any data type, including other objects or functions. Objects in JavaScript can be created using object literals or by instantiating object constructors.</p>
-
     <pre><code>
         // Creating an object using object literal
         let person = {
@@ -151,42 +147,35 @@ section {
             age: 30,
             isStudent: false
         };
-
         // Accessing object properties
         console.log(person.name); // Output: John
         console.log(person.age); // Output: 30
         console.log(person.isStudent); // Output: false
     </code></pre>
-</span>
+    </span>
     <h2>Introduction to Arrays</h2>
-<span style="font-size: 20px;">
+    <span style="font-size: 20px;">
     <p>An array in JavaScript is a special type of object that stores a list of elements. Arrays can hold multiple values of different data types, and each value is assigned a numeric index starting from zero. Arrays in JavaScript are dynamic, meaning they can grow or shrink in size dynamically.</p>
-
     <pre><code>
         // Creating an array
         let fruits = ['apple', 'banana', 'orange'];
-
         // Accessing array elements
         console.log(fruits[0]); // Output: apple
         console.log(fruits[1]); // Output: banana
         console.log(fruits[2]); // Output: orange
-
         // Modifying array elements
         fruits[1] = 'grape';
         console.log(fruits); // Output: ['apple', 'grape', 'orange']
-
         // Adding elements to an array
         fruits.push('mango');
         console.log(fruits); // Output: ['apple', 'grape', 'orange', 'mango']
-
         // Removing elements from an array
         fruits.pop();
         console.log(fruits); // Output: ['apple', 'grape', 'orange']
     </code></pre>
-</span>
-</section>	
+    </span>
+    </section>	
     </div>
 </div>
-
 </body>
 </html>
