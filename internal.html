@@ -8,7 +8,6 @@
         function greet() {
             alert('LOL!, this is an internal JavaScript function!');
         }
-
 </script>
 <style>
 body {
@@ -18,7 +17,6 @@ body {
   background-color: #f5f5dc;
 }
 
-/* Improved menu bar styles */
 nav {
   display: flex;
   align-items: center;
@@ -26,41 +24,47 @@ nav {
   background-color: #BAB86C;
   color: white;
   border-radius: 145px;
- box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); /* Shadow for the hover effect */
+ box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); 
 }
- button {
-  background-color: #BAB86C; /* Same color as menu bar */
+ 
+button 
+ {
+  background-color: #BAB86C; 
   color: white;
   padding: 10px 20px;
   border: none;
   border-radius: 20px;
   cursor: pointer;
-  transition: background-color 0.3s ease; /* Smooth transition on hover */
+  transition: background-color 0.3s ease; 
         }
-button:hover {
-  background-color: #a0a05a; /* Darker shade on hover */
+button:hover 
+ {
+  background-color: #a0a05a; 
 }
 
 
 nav a {
-  color: white; /* Text color */
+  color: white;
   text-decoration: none;
   font-weight: bold;
   padding: 10px 15px;
   border-radius: 20px;
-  transition: background-color 0.3s ease; /* Animation for smooth transition */
+  transition: background-color 0.3s ease;
 }
 
-nav a:hover {
-  background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent black on hover */
-  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); /* Shadow for the hover effect */
+nav a:hover 
+ {
+  background-color: rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
 }
 
-.dropdown {
+.dropdown
+ {
   position: relative;
 }
 
-.dropdown-content {
+.dropdown-content 
+ {
   display: none;
   position: absolute;
   background-color: #FFFFF0;
@@ -68,7 +72,7 @@ nav a:hover {
   min-width: 350px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
-   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); /* Shadow for the hover effect */
+   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
 }
 
 .dropdown-content a {
@@ -83,17 +87,15 @@ nav a:hover {
 
 .dropdown-content a:hover {
  background-color: rgba(0, 0, 0, 0.3);
-   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); /* Shadow for the hover effect */
+   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
 }
 
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
-/* Other styles remain unchanged */
 .content {
   padding: 50px;
-
 }
 
 .content h2 {
@@ -113,7 +115,7 @@ section {
   box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.1);
   padding: 20px;
   margin: 20px 0;
- box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); /* Shadow for the hover effect */
+ box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
 }
 
 .department-title {
@@ -124,7 +126,7 @@ section {
   font-weight: bold;
 }
 </style>
-    </head>
+</head>
 <body>
 <nav>
   <a href="home.html">Home</a>
@@ -156,8 +158,8 @@ section {
 </nav>
     <div class="content">
     <section>
-        <h2>Internal JavaScript</h2>
-<span style="font-size: 20px;">
+    <h2>Internal JavaScript</h2>
+    <span style="font-size: 20px;">
     <p><strong>About internal JavaScript:</strong></p>
     <p><strong><u>Embedded within HTML:</u></strong> Internal JavaScript is written directly within the HTML document, making it convenient for small scripts or scripts specific to that particular page.</p>
     <p><strong><u>Script Tags:</u></strong> To include internal JavaScript in an HTML document, you use <code>&lt;script&gt;</code> tags. These tags can be placed in the <code>&lt;head&gt;</code> section, the <code>&lt;body&gt;</code> section, or both. Placing the script in the <code>&lt;head&gt;</code> section ensures that it loads before the page content, while placing it in the <code>&lt;body&gt;</code> section allows the page content to load first.</p>
@@ -165,11 +167,11 @@ section {
     <p><strong><u>Access to DOM:</u></strong> Since internal JavaScript is embedded within the HTML document, it has direct access to the Document Object Model (DOM) of the page. This allows it to manipulate the structure, content, and style of the page dynamically.</p>
     <p><strong><u>Execution Order:</u></strong> Internal JavaScript executes in the order it appears in the HTML document. Scripts placed in the <code>&lt;head&gt;</code> section are executed before those in the <code>&lt;body&gt;</code> section.</p>
     <p><strong><u>Pros and Cons:</u></strong> Internal JavaScript can be convenient for small scripts or scripts specific to a single page since it's included directly within the HTML. However, for larger scripts or scripts used across multiple pages, it's often better to use external JavaScript files to separate concerns and improve maintainability.</p>
- <p>Here below button is an internal java button click it to view the message</p>
-</span>
+    <p>Here below button is an internal java button click it to view the message</p>
+    </span>
        <button onclick="greet()"><center>Click me</center></button>
-</section>
-    </div>
+    </section>
+</div>
 </div>
 </body>
 </html>
