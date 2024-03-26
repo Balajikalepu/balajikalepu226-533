@@ -8,7 +8,6 @@
         function greet() {
             alert('LOL!, this is an external JavaScript function!');
         }
-
 </script>
 <style>
 body {
@@ -18,7 +17,6 @@ body {
   background-color: #f5f5dc;
 }
 
-/* Improved menu bar styles */
 nav {
   display: flex;
   align-items: center;
@@ -26,34 +24,34 @@ nav {
   background-color: #BAB86C;
   color: white;
   border-radius: 145px;
- box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); /* Shadow for the hover effect */
+ box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); 
 }
  button {
-  background-color: #BAB86C; /* Same color as menu bar */
+  background-color: #BAB86C;
   color: white;
   padding: 10px 20px;
   border: none;
   border-radius: 20px;
   cursor: pointer;
-  transition: background-color 0.3s ease; /* Smooth transition on hover */
+  transition: background-color 0.3s ease;
         }
 button:hover {
-  background-color: #a0a05a; /* Darker shade on hover */
+  background-color: #a0a05a;
 }
 
 
 nav a {
-  color: white; /* Text color */
+  color: white;
   text-decoration: none;
   font-weight: bold;
   padding: 10px 15px;
   border-radius: 20px;
-  transition: background-color 0.3s ease; /* Animation for smooth transition */
+  transition: background-color 0.3s ease;
 }
 
 nav a:hover {
-  background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent black on hover */
-  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); /* Shadow for the hover effect */
+  background-color: rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
 }
 
 .dropdown {
@@ -68,7 +66,7 @@ nav a:hover {
   min-width: 350px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
-   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); /* Shadow for the hover effect */
+   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
 }
 
 .dropdown-content a {
@@ -83,17 +81,15 @@ nav a:hover {
 
 .dropdown-content a:hover {
  background-color: rgba(0, 0, 0, 0.3);
-   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); /* Shadow for the hover effect */
+   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
 }
 
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
-/* Other styles remain unchanged */
 .content {
   padding: 50px;
-
 }
 
 .content h2 {
@@ -113,7 +109,7 @@ section {
   box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.1);
   padding: 20px;
   margin: 20px 0;
- box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); /* Shadow for the hover effect */
+ box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
 }
 
 .department-title {
@@ -156,42 +152,35 @@ section {
 </nav>
     <div class="content">
     <section>
-        <h2>External JavaScript</h2>
-<span style="font-size: 20px;">
-
+    <h2>External JavaScript</h2>
+    <span style="font-size: 20px;">
     <p>External JavaScript refers to JavaScript code that is stored in a separate file and linked to an HTML document using the <code>&lt;script&gt;</code> tag. This approach offers several advantages, including:</p>
-
     <ul>
         <li><strong>Separation of Concerns:</strong> Keeping JavaScript code separate from HTML makes it easier to manage and maintain.</li>
         <li><strong>Code Reusability:</strong> You can reuse the same JavaScript file across multiple HTML pages.</li>
         <li><strong>Improved Performance:</strong> Browser caching can improve performance by storing JavaScript files locally after they have been loaded once.</li>
         <li><strong>Organization:</strong> External JavaScript files can be organized into folders and directories, making it easier to structure larger projects.</li>
     </ul>
-</span>
+    </span>
     <h2>Linking External JavaScript File</h2>
-<span style="font-size: 20px;">
+    <span style="font-size: 20px;">
     <p>To link an external JavaScript file to an HTML document, use the <code>&lt;script&gt;</code> tag with the <code>src</code> attribute. The <code>src</code> attribute specifies the path to the external JavaScript file.</p>
-</span>
+    </span>
     <pre><code><span style="font-size: 20px;">
-        &lt;script src="script.js"&gt;&lt;/script&gt;
-</span>
+         &lt;script src="script.js"&gt;&lt;/script&gt;
+    </span>
     </code></pre>
-<span style="font-size: 20px;">
-
+    <span style="font-size: 20px;">
     <p>Ensure that the <code>src</code> attribute points to the correct location of the JavaScript file relative to the HTML document. You can include the <code>&lt;script&gt;</code> tag in the <code>&lt;head&gt;</code> or <code>&lt;body&gt;</code> section of your HTML document.</p>
-</span>
+    </span>
     <h2>Example</h2>
-<span style="font-size: 20px;">
+    <span style="font-size: 20px;">
     <p>Here's an example of an external JavaScript file named <code>script.js</code>:</p>
-
     <pre><code>
         // script.js
         alert('Hello, this is an external JavaScript file!');
     </code></pre>
-
-
     <p>And here's how you link this external JavaScript file to an HTML document:</p>
-
     <pre><code>
         &lt;!DOCTYPE html&gt;
         &lt;html lang="en"&gt;
@@ -206,14 +195,12 @@ section {
         &lt;/body&gt;
         &lt;/html&gt;
     </code></pre>
-
     <p>When you open the HTML document in a web browser, it will display an alert dialog with the message "Hello, this is an external JavaScript file!"</p>
-
     <p>Using external JavaScript files is a best practice for building scalable and maintainable web applications.</p>
-<p>Here below button is a external java button click it to view the message</p>
- </span>
+    <p>Here below button is a external java button click it to view the message</p>
+    </span>
        <button onclick="greet()"><center>Click me</center></button>
-</section>
+    </section>
     </div>
 </div>
 </body>
