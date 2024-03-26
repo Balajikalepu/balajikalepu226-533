@@ -12,7 +12,6 @@ body {
   background-color: #f5f5dc;
 }
 
-/* Improved menu bar styles */
 nav {
   display: flex;
   align-items: center;
@@ -20,22 +19,22 @@ nav {
   background-color: #BAB86C;
   color: white;
   border-radius: 145px;
- box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); /* Shadow for the hover effect */
+ box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); 
 }
 
 
 nav a {
-  color: white; /* Text color */
+  color: white; 
   text-decoration: none;
   font-weight: bold;
   padding: 10px 15px;
   border-radius: 20px;
-  transition: background-color 0.3s ease; /* Animation for smooth transition */
+  transition: background-color 0.3s ease; 
 }
 
 nav a:hover {
-  background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent black on hover */
-  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); /* Shadow for the hover effect */
+  background-color: rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); 
 }
 
 .dropdown {
@@ -50,7 +49,7 @@ nav a:hover {
   min-width: 350px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
-   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); /* Shadow for the hover effect */
+   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
 }
 
 .dropdown-content a {
@@ -60,22 +59,19 @@ nav a:hover {
   border-radius:20px;
   display: block;
   transition: background-color 0.3s ease;
- 
 }
 
 .dropdown-content a:hover {
  background-color: rgba(0, 0, 0, 0.3);
-   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); /* Shadow for the hover effect */
+   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); 
 }
 
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
-/* Other styles remain unchanged */
 .content {
   padding: 50px;
-
 }
 
 .content h2 {
@@ -95,7 +91,7 @@ section {
   box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.1);
   padding: 20px;
   margin: 20px 0;
- box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); /* Shadow for the hover effect */
+ box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); 
 }
 
 .department-title {
@@ -137,15 +133,14 @@ section {
     </ul>
 </nav>
     <div class="content">
-       <section>
-<h2>Functions</h2>
-
+    <section>
+    <h2>Functions</h2>
     <h2>Introduction to Functions</h2>
-<span style="font-size: 20px;">
+    <span style="font-size: 20px;">
     <p>Functions are one of the fundamental building blocks in JavaScript. They allow you to encapsulate a block of code that can be executed and reused throughout your program. Functions can accept input parameters and return values.</p>
-</span>
+    </span>
     <h2>Defining Functions</h2>
-<span style="font-size: 20px;">
+    <span style="font-size: 20px;">
     <p>You can define functions using the <code>function</code> keyword followed by the function name, a list of parameters enclosed in parentheses, and the function body enclosed in curly braces.</p>
     <pre><code>
         // Defining a function
@@ -153,18 +148,18 @@ section {
             return 'Hello, ' + name + '!';
         }
     </code></pre>
-</span>
+    </span>
     <h2>Calling Functions</h2>
-<span style="font-size: 20px;">
+    <span style="font-size: 20px;">
     <p>To call a function, simply use the function name followed by parentheses. You can pass arguments to the function within the parentheses.</p>
     <pre><code>
         // Calling a function
         let message = greet('John');
         console.log(message); // Output: Hello, John!
     </code></pre>
-</span>
+    </span>
     <h2>Function Parameters and Arguments</h2>
-<span style="font-size: 20px;">
+    <span style="font-size: 20px;">
     <p>Functions can accept parameters, which are placeholders for values that the function expects to receive when it is called. Arguments are the actual values passed to the function when it is called.</p>
     <pre><code>
         // Function with parameters
@@ -174,9 +169,9 @@ section {
         let result = add(5, 3);
         console.log(result); // Output: 8
     </code></pre>
-</span>
+    </span>
     <h2>Returning Values</h2>
-<span style="font-size: 20px;">
+    <span style="font-size: 20px;">
     <p>Functions can return values using the <code>return</code> keyword. Once a function encounters a <code>return</code> statement, it immediately exits, and the value is returned to the caller.</p>
     <pre><code>
         // Function returning a value
@@ -186,9 +181,9 @@ section {
         let product = multiply(4, 6);
         console.log(product); // Output: 24
     </code></pre>
-</span>
+    </span>
     <h2>Anonymous Functions</h2>
-<span style="font-size: 20px;">
+    <span style="font-size: 20px;">
     <p>JavaScript also supports anonymous functions, which are functions without a name. They are often used as arguments to other functions or assigned to variables.</p>
     <pre><code>
         // Anonymous function assigned to a variable
@@ -196,9 +191,9 @@ section {
             return 'Hello, ' + name + '!';
         };
         console.log(greet('Jane')); // Output: Hello, Jane!
-    </code></pre>
-</span>
-</section>    
+    </code></pre>  
+    </span>
+    </section>    
     </div>
 </div>
 </body>
