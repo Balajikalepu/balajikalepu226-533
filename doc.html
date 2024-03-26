@@ -12,7 +12,6 @@ body {
   background-color: #f5f5dc;
 }
 
-/* Improved menu bar styles */
 nav {
   display: flex;
   align-items: center;
@@ -20,22 +19,22 @@ nav {
   background-color: #BAB86C;
   color: white;
   border-radius: 145px;
- box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); /* Shadow for the hover effect */
+ box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
 }
 
 
 nav a {
-  color: white; /* Text color */
+  color: white;
   text-decoration: none;
   font-weight: bold;
   padding: 10px 15px;
   border-radius: 20px;
-  transition: background-color 0.3s ease; /* Animation for smooth transition */
+  transition: background-color 0.3s ease;
 }
 
 nav a:hover {
-  background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent black on hover */
-  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); /* Shadow for the hover effect */
+  background-color: rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
 }
 
 .dropdown {
@@ -50,7 +49,7 @@ nav a:hover {
   min-width: 350px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
-   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); /* Shadow for the hover effect */
+   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
 }
 
 .dropdown-content a {
@@ -59,20 +58,18 @@ nav a:hover {
   text-decoration: none;
   border-radius:20px;
   display: block;
-  transition: background-color 0.3s ease;
- 
+  transition: background-color 0.3s ease; 
 }
 
 .dropdown-content a:hover {
  background-color: rgba(0, 0, 0, 0.3);
-   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); /* Shadow for the hover effect */
+   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
 }
 
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
-/* Other styles remain unchanged */
 .content {
   padding: 50px;
 
@@ -137,11 +134,10 @@ section {
     </ul>
 </nav>
     <div class="content">
-       <section>
-<h2>Introduction to Document and Window Object</h2>
-
+    <section>
+    <h2>Introduction to Document and Window Object</h2>
     <h2>Document Object Model (DOM):</h2>
-<span style="font-size: 20px;">
+    <span style="font-size: 20px;">
     <p>The Document Object Model represents the structure of an HTML document as a tree-like structure, where each node corresponds to an HTML element. This hierarchical representation allows JavaScript to access, modify, and manipulate the content, structure, and style of an HTML document dynamically.</p>
     <ul>
         <li><strong>Tree Structure:</strong> The DOM represents an HTML document as a tree structure, with each element as a node in the tree.</li>
@@ -149,9 +145,9 @@ section {
         <li><strong>Dynamic Updates:</strong> Changes made to the DOM through JavaScript are reflected instantly in the rendered web page, enabling dynamic updates and interactions.</li>
         <li><strong>Event Handling:</strong> The DOM allows JavaScript to register event listeners and respond to user interactions such as clicks, keypresses, mouse movements, etc.</li>
     </ul>
-</span>
+    </span>
     <h2>Window Object:</h2>
-<span style="font-size: 20px;">
+    <span style="font-size: 20px;">
     <p>The Window Object represents the browser window or tab that contains the HTML document. It provides methods and properties for controlling the browser window, navigating to different URLs, handling cookies, and much more.</p>
     <ul>
         <li><strong>Global Scope:</strong> In the browser environment, the Window Object is the global object. This means that properties and methods of the Window Object can be accessed directly without qualification.</li>
@@ -159,12 +155,10 @@ section {
         <li><strong>Navigation:</strong> Methods like <code>window.location</code> allow for navigation to different URLs, while properties like <code>window.history</code> provide access to the browsing history.</li>
         <li><strong>Window Events:</strong> The Window Object allows JavaScript to respond to various browser events such as loading, resizing, scrolling, etc.</li>
     </ul>
-
     <p>Understanding the Document Object Model and Window Object is essential for creating dynamic and interactive web applications. By leveraging these objects, developers can create powerful and engaging user experiences on the web.</p>
-</span>
-</section>
+    </span>
+    </section>
     </div>
 </div>
-
 </body>
 </html>
