@@ -12,6 +12,7 @@ body {
   background-color: #f5f5dc;
 }
 
+
 nav {
   display: flex;
   align-items: center;
@@ -20,9 +21,11 @@ nav {
   color: white;
   border-radius: 145px;
  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); 
+}
+
 
 nav a {
-  color: white; 
+  color: white; /* Text color */
   text-decoration: none;
   font-weight: bold;
   padding: 10px 15px;
@@ -47,7 +50,7 @@ nav a:hover {
   min-width: 350px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
-   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); 
 }
 
 .dropdown-content a {
@@ -62,7 +65,7 @@ nav a:hover {
 
 .dropdown-content a:hover {
  background-color: rgba(0, 0, 0, 0.3);
-   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); 
 }
 
 .dropdown:hover .dropdown-content {
@@ -112,7 +115,6 @@ section {
   <div class="dropdown">
     <a href="#">Lab</a>
     <div class="dropdown-content">
-	    <a>226M1A0533</a>
       <a href="intro.html">1. Introduction to JavaScript</a>
       <a href="#">2. Applying JavaScript</a>
       <a href="internal.html">Internal Java</a>
@@ -134,12 +136,12 @@ section {
 </nav>
     <div class="content">
     <section>
-    <h2>Switch Case in JavaScript</h2>
-    <span style="font-size: 20px;">
+<h2>Switch Case in JavaScript</h2>
+<span style="font-size: 20px;">
     <p>The switch statement is used to perform different actions based on different conditions. It evaluates an expression, matches the expression value with case labels, and executes the block of code associated with the matching case.</p>
-    </span>
+</span>
     <h2>Syntax</h2>
-    <span style="font-size: 20px;">
+<span style="font-size: 20px;">
     <pre><code>
         switch (expression) {
             case value1:
@@ -154,13 +156,15 @@ section {
                 break;
         }
     </code></pre>
+
     <p>The <code>switch</code> keyword is followed by an expression in parentheses. The expression is evaluated once and compared with the values of each case. If there is a match, the associated block of code is executed. If no match is found, the <code>default</code> block (if provided) is executed.</p>
-    </span>
+</span>
     <h2>Example</h2>
-    <span style="font-size: 20px;">
+<span style="font-size: 20px;">
     <pre><code>
         let day = "Wednesday";
         let message;
+
         switch (day) {
             case "Monday":
                 message = "It's Monday!";
@@ -175,13 +179,18 @@ section {
                 message = "It's neither Monday nor Tuesday nor Wednesday.";
                 break;
         }
+
         console.log(message); // Output: It's Wednesday!
     </code></pre>
+
     <p>In this example, the value of the <code>day</code> variable is evaluated in the switch statement. Since the value is "Wednesday", the corresponding case block is executed, assigning the message "It's Wednesday!" to the <code>message</code> variable.</p>
+
     <p>Switch case statements provide a cleaner way to write code when there are multiple conditions to be evaluated.</p>
-    </span>
-    </section>
+</span>
+</section>
+	
     </div>
 </div>
+
 </body>
 </html>
