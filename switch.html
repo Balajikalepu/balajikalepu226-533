@@ -12,7 +12,6 @@ body {
   background-color: #f5f5dc;
 }
 
-/* Improved menu bar styles */
 nav {
   display: flex;
   align-items: center;
@@ -20,22 +19,20 @@ nav {
   background-color: #BAB86C;
   color: white;
   border-radius: 145px;
- box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); /* Shadow for the hover effect */
-}
-
+ box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); 
 
 nav a {
-  color: white; /* Text color */
+  color: white; 
   text-decoration: none;
   font-weight: bold;
   padding: 10px 15px;
   border-radius: 20px;
-  transition: background-color 0.3s ease; /* Animation for smooth transition */
+  transition: background-color 0.3s ease; 
 }
 
 nav a:hover {
-  background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent black on hover */
-  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); /* Shadow for the hover effect */
+  background-color: rgba(0, 0, 0, 0.3); 
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); 
 }
 
 .dropdown {
@@ -50,7 +47,7 @@ nav a:hover {
   min-width: 350px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
-   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); /* Shadow for the hover effect */
+   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
 }
 
 .dropdown-content a {
@@ -65,14 +62,13 @@ nav a:hover {
 
 .dropdown-content a:hover {
  background-color: rgba(0, 0, 0, 0.3);
-   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); /* Shadow for the hover effect */
+   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
 }
 
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
-/* Other styles remain unchanged */
 .content {
   padding: 50px;
 
@@ -91,11 +87,11 @@ nav a:hover {
 
 section {
   background-color: #FFFFF0;
-   border-radius: 40px;
+   border-radius: 20px;
   box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.1);
   padding: 20px;
   margin: 20px 0;
- box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); /* Shadow for the hover effect */
+ box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
 }
 
 .department-title {
@@ -138,12 +134,12 @@ section {
 </nav>
     <div class="content">
     <section>
-<h2>Switch Case in JavaScript</h2>
-<span style="font-size: 20px;">
+    <h2>Switch Case in JavaScript</h2>
+    <span style="font-size: 20px;">
     <p>The switch statement is used to perform different actions based on different conditions. It evaluates an expression, matches the expression value with case labels, and executes the block of code associated with the matching case.</p>
-</span>
+    </span>
     <h2>Syntax</h2>
-<span style="font-size: 20px;">
+    <span style="font-size: 20px;">
     <pre><code>
         switch (expression) {
             case value1:
@@ -158,15 +154,13 @@ section {
                 break;
         }
     </code></pre>
-
     <p>The <code>switch</code> keyword is followed by an expression in parentheses. The expression is evaluated once and compared with the values of each case. If there is a match, the associated block of code is executed. If no match is found, the <code>default</code> block (if provided) is executed.</p>
-</span>
+    </span>
     <h2>Example</h2>
-<span style="font-size: 20px;">
+    <span style="font-size: 20px;">
     <pre><code>
         let day = "Wednesday";
         let message;
-
         switch (day) {
             case "Monday":
                 message = "It's Monday!";
@@ -181,18 +175,13 @@ section {
                 message = "It's neither Monday nor Tuesday nor Wednesday.";
                 break;
         }
-
         console.log(message); // Output: It's Wednesday!
     </code></pre>
-
     <p>In this example, the value of the <code>day</code> variable is evaluated in the switch statement. Since the value is "Wednesday", the corresponding case block is executed, assigning the message "It's Wednesday!" to the <code>message</code> variable.</p>
-
     <p>Switch case statements provide a cleaner way to write code when there are multiple conditions to be evaluated.</p>
-</span>
-</section>
-	
+    </span>
+    </section>
     </div>
 </div>
-
 </body>
 </html>
