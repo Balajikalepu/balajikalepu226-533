@@ -20,17 +20,8 @@ nav {
   background-color: #BAB86C;
   color: white;
   border-radius: 145px;
- box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); /* Shadow for the hover effect */
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); /* Shadow for the hover effect */
 }
-  .rounded-image {
-    border-radius: 40px;  /* Set 50% for a circular image */
-    width: 150px;  /* Adjust width as needed */
-    height: 200px;  /* Adjust height as needed */
-    object-fit: cover;  /* Maintain aspect ratio and scale to fit */
- 
-}
-
-
 
 nav a {
   color: white; /* Text color */
@@ -54,36 +45,34 @@ nav a:hover {
   display: none;
   position: absolute;
   background-color: #FFFFF0;
-  border-radius:20px;
+  border-radius: 20px;
   min-width: 350px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
-   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); /* Shadow for the hover effect */
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); /* Shadow for the hover effect */
 }
 
 .dropdown-content a {
   color: black;
   padding: 12px 16px;
   text-decoration: none;
-  border-radius:20px;
+  border-radius: 20px;
   display: block;
   transition: background-color 0.3s ease;
- 
 }
 
 .dropdown-content a:hover {
- background-color: rgba(0, 0, 0, 0.3);
-   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); /* Shadow for the hover effect */
+  background-color: rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); /* Shadow for the hover effect */
 }
 
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
-/* Other styles remain unchanged */
 .content {
   padding: 50px;
-  text-align: center;
+  text-align: left;
 }
 
 .content h2 {
@@ -99,11 +88,11 @@ nav a:hover {
 
 section {
   background-color: #FFFFF0;
-   border-radius: 145px;
+  border-radius: 45px;
   box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.1);
-  padding: 20px;
-  margin: 20px 0;
- box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); /* Shadow for the hover effect */
+  padding: 50px;
+  margin: 40px 0;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); /* Shadow for the hover effect */
 }
 
 .department-title {
@@ -112,6 +101,32 @@ section {
 
 .department-info {
   font-weight: bold;
+}
+
+.rounded-image {
+  border-radius: 20px;
+  width: 250px;
+  height: 300px;
+  object-fit: cover;
+  float: left;
+  margin-right: 20px;
+  margin-bottom:150px;
+}
+.rounded-image1 {
+  border-radius: 40px;
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  float: right;
+  margin-left: 20px;
+}
+.rounded-image2 {
+  border-radius: 40px;
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+float: right;
+  margin-left: 60px;
 
 }
 </style>
@@ -141,30 +156,30 @@ section {
       <a href="switch.html">11.Switch Case</a>
       <a href="loop.html">12.Looping in JS</a>
       <a href="func.html">13.Functions</a>
-            </div>
-        </li>
-    </ul>
+    </div>
+  </div>
 </nav>
 
-    <div class="content">
-    <h2>Welcome to My Webpage</h2>
-<section class="department-section"> 
+<div class="content">
+  <h2><center>Welcome to My Webpage</center></h2>
+  <section class="department-section">
+    <b><u><left><h2>Personal Details:</h2></left></u></b>
 
-<b><u><h2>Personal Details</h2></u></b>
+    <img src="C:\Users\HP\Downloads\WhatsApp Image 2024-03-26 at 12.46.36_63f61562.jpg" alt="Kalepu Sri Balaji" class="rounded-image">
+<img src="C:\Users\HP\Downloads\Designer.png" alt="Kalepu Sri Balaji" class="rounded-image1">
+<img src="C:\Users\HP\Downloads\Designer (1).png" alt="Kalepu Sri Balaji" class="rounded-image2">
 
-<img src="WhatsApp Image 2024-03-26 at 12.46.36_63f61562.jpg" alt="Kalepu Sri Balaji" class="rounded-image"> 
+    <div>
+      <p><span style="font-size: 20px;"><b>Name:</b> </span><span style="font-size: 20px;">Kalepu Sri Balaji</span></p>
+      <p><span style="font-size: 20px;"><b>Roll No:</b> </span> <span style="font-size: 20px;"><b>226M1A0533</b> </span></p>
+      <h1 class="department-title"><u>Department Information</u></h1>
+      <p class="department-info"><b>Department:</b> DEPARTMENT OF CSE</p>
+      <p class="department-info"><b>Course:</b>Computer Science Of Engineering</p>
+      <p class="department-info"><b>Program:</b> SKILL ORIENTED LAB</p>
 
-            <p><span style="font-size: 20px;"><b>Name:</b> </span><span style="font-size: 20px;">Kalepu Sri Balaji</span></p>
-            <p><span style="font-size: 20px;"><b>Roll No:</b> </span> <span style="font-size: 20px;"><b>226M1A0533</b> </span></p>
-     
-        
-            <h2 class="department-title"><u>Department Information</u></h2>
-            <p class="department-info"><b>Department:</b> DEPARTMENT OF CSE</p>
-            <p class="department-info"><b>Program:</b> SKILL ORIENTED LAB</p>
-           </section>
     </div>
+  </section>
 </div>
-
 
 </body>
 </html>
