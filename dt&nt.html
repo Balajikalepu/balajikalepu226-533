@@ -12,7 +12,6 @@ body {
   background-color: #f5f5dc;
 }
 
-/* Improved menu bar styles */
 nav {
   display: flex;
   align-items: center;
@@ -20,22 +19,21 @@ nav {
   background-color: #BAB86C;
   color: white;
   border-radius: 145px;
- box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); /* Shadow for the hover effect */
+ box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
 }
 
-
 nav a {
-  color: white; /* Text color */
+  color: white;
   text-decoration: none;
   font-weight: bold;
   padding: 10px 15px;
   border-radius: 20px;
-  transition: background-color 0.3s ease; /* Animation for smooth transition */
+  transition: background-color 0.3s ease;
 }
 
 nav a:hover {
-  background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent black on hover */
-  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); /* Shadow for the hover effect */
+  background-color: rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
 }
 
 .dropdown {
@@ -50,7 +48,7 @@ nav a:hover {
   min-width: 350px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
-   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); /* Shadow for the hover effect */
+   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
 }
 
 .dropdown-content a {
@@ -60,22 +58,19 @@ nav a:hover {
   border-radius:20px;
   display: block;
   transition: background-color 0.3s ease;
- 
 }
 
 .dropdown-content a:hover {
  background-color: rgba(0, 0, 0, 0.3);
-   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); /* Shadow for the hover effect */
+   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
 }
 
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
-/* Other styles remain unchanged */
 .content {
   padding: 50px;
-
 }
 
 .content h2 {
@@ -91,11 +86,11 @@ nav a:hover {
 
 section {
   background-color: #FFFFF0;
-   border-radius: 40px;
+  border-radius: 0px;
   box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.1);
   padding: 20px;
   margin: 20px 0;
- box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); /* Shadow for the hover effect */
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
 }
 
 .department-title {
@@ -137,11 +132,10 @@ section {
     </ul>
 </nav>
     <div class="content">
-       <section>
- <h2>Data Types and NUM Type Conversions</h2>
-
+    <section>
+    <h2>Data Types and NUM Type Conversions</h2>
     <h2>Data Types</h2>
-<span style="font-size: 20px;">
+    <span style="font-size: 20px;">
     <p>JavaScript supports several data types:</p>
     <ul>
         <li><strong>Number:</strong> Represents numeric data, including integers, floats, and NaN (Not-a-Number).</li>
@@ -152,24 +146,23 @@ section {
         <li><strong>Object:</strong> Represents a collection of key-value pairs.</li>
         <li><strong>Symbol:</strong> Represents unique identifiers.</li>
     </ul>
-</span>
+    </span>
     <h2>Numeric Type Conversions</h2>
-<span style="font-size: 20px;">
+    <span style="font-size: 20px;">
     <p>JavaScript provides various methods for converting data between different numeric types:</p>
     <ul>
         <li><strong>parseInt():</strong> Converts a string to an integer.</li>
         <li><strong>parseFloat():</strong> Converts a string to a floating-point number.</li>
         <li><strong>Number():</strong> Converts a value to a number.</li>
     </ul>
-</span>
+    </span>
     <h3>Example:</h3>
-<span style="font-size: 20px;">
+    <span style="font-size: 20px;">
     <pre><code>
         let numString = "10";
         let numInt = parseInt(numString); // Convert string to integer
         let numFloat = parseFloat("3.14"); // Convert string to float
         let numConversion = Number(true); // Convert boolean to number
-
         console.log(numInt); // Output: 10
         console.log(numFloat); // Output: 3.14
         console.log(numConversion); // Output: 1
@@ -178,6 +171,5 @@ section {
 </section>	
     </div>
 </div>
-
 </body>
 </html>
