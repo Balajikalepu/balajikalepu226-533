@@ -6,12 +6,12 @@
 <title>226M1A0533</title>
 <style>
 body {
-  font-family: sans-serif;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5dc;
   margin: 0;
   padding: 0;
-  background-color: #f5f5dc;
 }
-  
+
 nav {
   display: flex;
   align-items: center;
@@ -19,7 +19,7 @@ nav {
   background-color: #BAB86C;
   color: white;
   border-radius: 145px;
-  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); 
+ box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
 }
 
 nav a {
@@ -28,7 +28,7 @@ nav a {
   font-weight: bold;
   padding: 10px 15px;
   border-radius: 20px;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease; 
 }
 
 nav a:hover {
@@ -44,95 +44,141 @@ nav a:hover {
   display: none;
   position: absolute;
   background-color: #FFFFF0;
-  border-radius: 20px;
+  border-radius:20px;
   min-width: 350px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
-  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); 
 }
 
 .dropdown-content a {
   color: black;
   padding: 12px 16px;
   text-decoration: none;
-  border-radius: 20px;
+  border-radius:20px;
   display: block;
   transition: background-color 0.3s ease;
+ 
 }
 
 .dropdown-content a:hover {
-  background-color: rgba(0, 0, 0, 0.3);
-  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); 
+ background-color: rgba(0, 0, 0, 0.3);
+   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); 
 }
 
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
-.content {
-  padding: 50px;
-  text-align: left;
+.container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #FFFFF0;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
-.content h2 {
+.container h2 {
+  margin-bottom: 20px;
+  color: #333; 
+}
+
+.personal-details {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+background-color: #FFFFF0;
+   border-radius: 20px;
+  box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.1);
+  padding: 20px;
+  margin: 20px 0;
+ box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); 
+transition: transform 0.3s ease;
+
+}
+.personal-details:hover {
+  transform: scale(1.1); 
+}
+
+.profile-picture {
+  width: 150px;
+  height: 170px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-right: 20px;
+  transition: transform 0.3s ease;
+}
+
+.profile-picture:hover {
+  transform: scale(1.1); 
+}
+
+.profile-picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.personal-info {
+  flex: 1;
+}
+
+.personal-info h3 {
   margin-top: 0;
-  font-size: 2em;
   color: #333;
 }
 
-.content p {
-  line-height: 1.6;
+.personal-info p {
+  margin: 5px 0;
   color: #666;
 }
 
-section {
-  background-color: #FFFFF0;
-  border-radius: 20px;
-  box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.1);
-  padding: 50px;
-  margin: 40px 0;
-  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); 
-}
-
-.department-title {
-  margin-bottom: 10px;
-}
-
 .department-info {
-  font-weight: bold;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+transition: transform 0.3s ease;
+
+}
+.department-info:hover {
+  transform: scale(1.1); 
 }
 
-.rounded-image {
-  border-radius: 20px;
-  width: 250px;
-  height: 300px;
-  object-fit: cover;
-  float: left;
-  margin-right: 20px;
-  margin-bottom:150px;
-}
-.rounded-image1 {
-  border-radius: 40px;
-  width: 250px;
-  height: 250px;
-  object-fit: cover;
-  float: right;
-  margin-left: 20px;
-}
-.rounded-image2 {
-  border-radius: 40px;
-  width: 250px;
-  height: 250px;
-  object-fit: cover;
-float: right;
-  margin-left: 60px;
 
+.department-info h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.department-info p {
+  margin-bottom: 10px;
+  color: #666;
+}
+
+.images-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.image {
+  width: 45%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.image img {
+  width: 100%;
+  border-radius: 10px;
 }
 </style>
 </head>
 <body>
-<nav>
-  <a href="home.html">Home</a>
+<nav>  
+<a href="home.html">Home</a>
   <a href="login.html">Login</a>
   <a href="register.html">Register</a>
   <a href="aboutus.html">About Me</a>
@@ -156,24 +202,27 @@ float: right;
       <a href="loop.html">12.Looping in JS</a>
       <a href="func.html">13.Functions</a>
     </div>
-  </div>
+</div>
 </nav>
-<div class="content">
-  <h2><center>Welcome to My Webpage</center></h2>
-  <section class="department-section">
-    <b><u><left><h2>Personal Details:</h2></left></u></b>
-    <img src="WhatsApp Image 2024-03-26 at 12.46.36_63f61562.jpg" alt="Kalepu Sri Balaji" class="rounded-image">
-    <img src="Designer (1).png" alt="Kalepu Sri Balaji" class="rounded-image1">
-    <img src="Designer.png" alt="Kalepu Sri Balaji" class="rounded-image2">
-    <div>
-      <p><span style="font-size: 20px;"><b>Name:</b> </span><span style="font-size: 20px;">Kalepu Sri Balaji</span></p>
-      <p><span style="font-size: 20px;"><b>Roll No:</b> </span> <span style="font-size: 20px;"><b>226M1A0533</b> </span></p>
-      <h1 class="department-title"><u>Department Information</u></h1>
-      <p class="department-info"><b>Department:</b> DEPARTMENT OF CSE</p>
-      <p class="department-info"><b>Course:</b>Computer Science Of Engineering</p>
-      <p class="department-info"><b>Program:</b> SKILL ORIENTED LAB</p>
+ <div class="container">
+  <h2>Welcome to My Webpage</h2>
+  <div class="personal-details">
+    <div class="profile-picture">
+      <img src="C:\Users\HP\Desktop\SOC\WhatsApp Image 2024-03-26 at 12.46.36_63f61562.jpg" alt="Profile Picture">
     </div>
-  </section>
+    <div class="personal-info">
+      <h3>Personal Details:</h3>
+      <p>Name: Kalepu Sri Balaji</p>
+      <p>Roll No: 226M1A0533</p>
+    </div>
+  </div>
+  <div class="department-info">
+    <h3>Department Information</h3>
+    <p>Department: DEPARTMENT OF CSE</p>
+    <p>Course: Computer Science Of Engineering</p>
+    <p>Program: SKILL ORIENTED LAB</p>
+  </div>
 </div>
 </body>
-</html>
+</html>   
+
